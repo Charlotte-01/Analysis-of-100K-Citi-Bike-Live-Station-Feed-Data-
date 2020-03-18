@@ -20,4 +20,4 @@ part3:
 
 to run the result to kibana:
 
-$ docker-compose run -e APP_KEY={APP_KEY} -v ${pwd}:/app pyth python -m main --page_size=100 --num_pages=10 --output=results.json --push_es=True
+$ docker-compose run -e APP_KEY={APP_KEY} -v ${pwd}:/app pyth python main.py --page_size=1000 --num_pages=10 --output=results.json --push_es=True

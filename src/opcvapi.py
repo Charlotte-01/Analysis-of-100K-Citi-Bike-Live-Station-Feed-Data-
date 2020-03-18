@@ -12,7 +12,7 @@ def call_opcv(YOUR_APP_KEY, page_size, num_pages, output, push_es):
 	if output:
 		results = open(output, 'w')
 	if push_es:
-		es = create_index('opcv')
+		es = create_index('index1')
 	for i in range(num_pages):
 		page = client.get("nc67-uf89", limit = page_size, offset = i*page_size)
 		if output:
@@ -21,6 +21,6 @@ def call_opcv(YOUR_APP_KEY, page_size, num_pages, output, push_es):
 			pprint.pprint(page)
 		if push_es:
 			for record in page:
-				push_record(record, es, 'opcv')
+				push_record(record, es, 'index1')
 	if output:
 		print(results)
