@@ -6,7 +6,7 @@ Support below commend line:
 
 $ docker run -v $(pwd):/app -e APP_KEY= {APP_KEY} -t sta:1.0 python main.py --page_size=1000 --num_pages=4 --output=results.json
 
-Result: results.json & resuls.json
+Result: results.json
 
 Part2:
 
